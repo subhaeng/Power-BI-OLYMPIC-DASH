@@ -35,6 +35,10 @@ Analyzes how different age groups perform in terms of medal counts and athlete p
  Top Athletes
 Lists top-performing athletes by total medals and their respective countries.
 
+##Dashboard
+<img width="1918" height="796" alt="Dashboard" src="https://github.com/user-attachments/assets/edd78e97-ca06-499c-bb8b-2c95bba55a3b" />
+
+
  Purpose of the Dashboard:
 To analyze Olympic performance trends, discover top-performing nations and athletes, and understand demographics (gender, age) and sport-specific medal distribution through a clean, visual, and filterable interface.
 
