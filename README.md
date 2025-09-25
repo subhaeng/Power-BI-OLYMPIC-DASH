@@ -1,4 +1,5 @@
 🏅 Olympic Games Analytics Dashboard
+
 📌 Introduction
 
 The Olympic Games Analytics Dashboard is an interactive Power BI dashboard that delivers a comprehensive analysis of Olympic Games data. It focuses on medal distribution, athlete statistics, and country-wise performance, helping sports analysts, researchers, and enthusiasts uncover valuable insights into Olympic history and trends.
