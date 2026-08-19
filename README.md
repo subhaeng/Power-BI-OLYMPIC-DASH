@@ -1,136 +1,72 @@
-🏅 Olympic Games Analytics Dashboard
+# 🏅 Olympic Games Dashboard (Power BI)
 
-📌 Introduction
+A single-page Power BI report that explores historical Olympic Games athlete and medal data — built for quick, interactive analysis of medal counts, participation, and demographics across countries, sports, and years.
 
-The Olympic Games Analytics Dashboard is an interactive Power BI dashboard that delivers a comprehensive analysis of Olympic Games data. It focuses on medal distribution, athlete statistics, and country-wise performance, helping sports analysts, researchers, and enthusiasts uncover valuable insights into Olympic history and trends.
+## 📁 File
 
-By transforming raw data into engaging visuals, this dashboard allows users to explore medal patterns by country, sport, gender, and age group, providing a powerful tool for understanding global sporting achievements.
+| File | Description |
+|---|---|
+| `Olympic.pbix` | Power BI Desktop report file containing the data model, DAX measures, and the dashboard visuals |
 
-🎯 Objectives
+## 📊 Dashboard Overview — "OLYMPIC DASHBOARD"
 
-Provide a comprehensive medal overview (total, gold, silver, bronze).
+The report consists of one report page titled **Olympic Games**, laid out as a KPI + analytics dashboard.
 
-Analyze country-wise Olympic performance across multiple decades.
+### KPI Cards
+Headline numbers pulled from the `Measure_` table:
+- **Total Medal**
+- **Gold**
+- **Silver**
+- **Bronze**
+- **Total Athletes**
 
-Identify top-performing athletes and leading sports.
+### Visuals
 
-Examine gender contributions and age group trends.
+| Visual | Type | Fields | Purpose |
+|---|---|---|---|
+| Medal Map | Map | `Medal`, `City` | Geographic distribution of medals by host city |
+| Athletes by Sport | Bar chart | `Sport`, Count of `Name` | Number of athletes competing per sport |
+| Medals by Team | Clustered column chart | `Team`, `Gold`, `Silver`, `Bronze` | Medal breakdown (Gold/Silver/Bronze) by country/team |
+| Gold Medal | Bar chart | `Gold`, `Team`, `Gender` | Gold medal counts by team, split by gender |
+| Total Medal By Age Group | Column chart | `Age Bucket`, Count of `Name`, `Total Medal` | Medal totals across athlete age brackets |
+| Total Medal By Age Group | Table | `Athlete`, `Country`, `Total Medal` | Detailed athlete-level medal table |
 
-Enable interactive exploration for data-driven sports insights.
+### Slicers (Filters)
+Interactive slicers let users filter the entire page by:
+- **Year**
+- **Country**
+- **Medal**
+- **Gender**
+- **Sport**
+- **Age Bucket**
 
-✨ Key Features
+## 🗂️ Data Model
 
-🏆 Medal Statistics
+- **`athlete`** — fact/dimension table with columns such as `Name`, `Country`, `Team`, `Gender`, `Age Bucket`, `Sport`, `City`, `Medal`, `Year`
+- **`Measure_`** — a dedicated measures table holding the DAX calculations: `Total Medal`, `Gold`, `Silver`, `Bronze`, `Total Athletes`
 
-Total Medals: 39,783
+## 🛠️ Requirements
 
-Gold: 13,372
+- [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop) (Windows) to open and edit `Olympic.pbix`
+- No external data source connections are required beyond what's embedded in the file — the report opens with its data model already loaded
 
-Silver: 13,116
+## 🚀 Getting Started
 
-Bronze: 13,295
+1. Download `Olympic.pbix`.
+2. Open it in Power BI Desktop.
+3. Use the slicers on the left/side of the page to filter by year, country, medal type, gender, sport, or age group.
+4. Hover over visuals for tooltips, or right-click to drill through/export data as needed.
 
-👥 Athlete Participation
+## ✏️ Customization Ideas
 
-Total athletes: 1,35,571
+- Add a page for time-trend analysis (medals over Olympic years).
+- Break the single page into multiple report pages (e.g., Overview, Country Deep-Dive, Athlete Explorer).
+- Add bookmarks for guided storytelling.
+- Publish to the Power BI Service for sharing and scheduled refresh.
 
-🗺 Medal Distribution Map
+---
 
-Visualizes medals won by cities worldwide, broken down by medal type.
-
-⚽ Medals by Sport
-
-Highlights the most medal-rich sports such as Athletics and Gymnastics.
-
-🌍 Country Comparison
-
-Benchmarks performance of countries like United States, Soviet Union, and Germany.
-
-🚹🚺 Gender-wise Breakdown
-
-Splits medals by male vs. female contributions, especially gold medals.
-
-🎂 Age Group Analysis
-
-Examines athlete performance by different age categories.
-
-⭐ Top Athletes
-
-Lists the top medal-winning athletes and their respective countries.
-
-🔍 Insights Delivered
-
-United States leads consistently in medal count across decades.
-
-Athletics and Gymnastics dominate as the top medal-producing sports.
-
-Gender distribution shows significant growth in female athletes’ contributions.
-
-Peak athlete performance typically falls within prime age ranges.
-
-Legendary athletes with multiple medals highlight individual dominance in Olympic history.
-
-🛠 Tools & Technologies
-
-Power BI → Interactive dashboard & data visualization
-
-DAX → Calculated measures & KPIs
-
-CSV/Excel Dataset → Olympic historical records
-
-📊 Dataset Used
-
-The dataset contains historical Olympic data with details such as:
-
-Athlete Name
-
-Country
-
-Sport & Event
-
-Medal Type (Gold/Silver/Bronze)
-
-Age & Gender
-
-Year & Hosting City
-
-(Dataset source can be added here if publicly available – e.g., Kaggle or IOC database.)
-
-🚀 Installation & Usage
-
-Clone this repository:
-
-git clone https://github.com/your-username/Power-BI-OLYMPIC-DASH.git
-
-
-Open the .pbix file in Power BI Desktop.
-
-Connect the dashboard to the provided Olympic dataset (CSV/Excel).
-
-Refresh the data to load visuals and KPIs.
-
-Explore the interactive dashboard using filters and slicers.
-
-📂 Project Structure
-Power-BI-OLYMPIC-DASH/
-│── data/                # Olympic dataset (CSV/Excel)
-│── reports/             # Exported PDF/PowerPoint reports
-│── Olympic-Dashboard.pbix  # Power BI dashboard file
-│── README.md            # Project documentation
-
-📷 Dashboard Preview
-
-(Add screenshots or GIFs of your Power BI dashboard here for better visualization on GitHub.)
-
-💼 Business & Analytical Value
-
-This dashboard empowers:
-
-Sports Federations → Optimize athlete development & training strategies.
-
-Analysts & Researchers → Study long-term Olympic trends by sport, country, gender, and age.
-
-Fans & Enthusiasts → Explore Olympic history in an interactive and engaging way.
+*This README was generated by inspecting the report layout and data model embedded in `Olympic.pbix`.*
 
 ##Dashboard
 <img width="1918" height="796" alt="Dashboard" src="https://github.com/user-attachments/assets/edd78e97-ca06-499c-bb8b-2c95bba55a3b" />
